@@ -1,0 +1,223 @@
+*{
+	font-family: verdana;
+	box-sizing: border-box;
+}
+h1{
+	color: red;
+}
+.container
+{
+    width: 500px;
+    margin: 20px auto;
+}
+.input-group-text {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            padding: 0.375rem 0.75rem;
+            margin-bottom: 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1.6;
+            color: #495057;
+            text-align: center;
+            white-space: nowrap;
+            background-color: #e9ecef;
+            border: 1px solid #ced4da;
+            border-radius: 0;
+        }
+.form-control{
+	width: !important 30%;
+}
+.btn-ingresar{
+	width: 200px;
+	background-color: rgb(245, 158, 168, 0.3);
+    border-radius: 5px;
+    cursor:pointer;
+    color: #222;
+    text-decoration: none;
+}
+.btn-registrar{
+	width: 400px;
+	 background-color: rgb(245, 158, 168, 0.3);
+}
+
+#main{
+	text-align: center;
+}
+#Frutas{
+	position: absolute; 
+	width: 300px;
+	height: 300px;
+	left: 179px; 
+	top: 55px; 
+	/*border-style: solid; 
+	border-color: black;*/
+}
+#Frutas img{
+	width: 40%;
+  	height: auto;
+}
+#cupcake{
+	position: absolute; 
+	width: 300px;
+	height: 300px;
+	left: 80px; 
+	top: 90px; 
+	/*border-style: solid; 
+	border-color: red;*/
+}
+#cupcake img{
+	width: 100%;
+  	height: auto;
+}
+#Cremas{
+	position: absolute; 
+	width: 300px;
+	height: 300px;
+	left: 80px; 
+	top: 82px; 
+	/*border-style: solid; 
+	border-color: green;*/
+}
+#Cremas img{
+	width: 100%;
+  	height: auto;
+}
+#Figuras{
+	position: absolute; 
+	width: 200px;
+	height: 300px;
+	left: 131px; 
+	top: 85px; 
+	/*border-style: solid; 
+	border-color: yellow;*/
+}
+#Figuras img{
+	width: 100%;
+  	height: auto;
+}
+#Galletas{
+	position: absolute; 
+	width: 150px;
+	height: 150px;
+	left: 180px; 
+	top: 60px; 
+	/*border-style: solid; 
+	border-color: purple;*/
+}
+#Galletas img{
+	width: 100%;
+  	height: auto;
+}
+#Capacillo{
+	position: absolute; 
+	width: 750px;
+	height: 350px;
+	left: 80px; 
+	top: 120px; 
+	/*border-style: solid; 
+	border-color: blue;*/
+}
+#Capacillo img{
+	width: 40%;
+  	height: auto;
+}
+#Chocolates{
+	position: absolute; 
+	width: 150px;
+	height: 200px;
+	left: 150px; 
+	top: 140px; 
+	/*border-style: solid; 
+	border-color: orange;*/
+}
+#Chocolates img{
+	width: 100%;
+  	height: auto;
+}
+.frutas{
+	width: 20px;
+	height: 20px;
+	display: none;
+}
+@supports(object-fit: cover){
+    #cupcake img{
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+}
+.btns-shadow {
+    background-color: rgb(245, 158, 168, 0.3);
+    border-radius: 5px;
+    cursor:pointer;
+    color: #222;
+    text-decoration: none;
+}
+#torta{
+	position: absolute; 
+	width: 300px;
+	height: 300px;
+	left: 87px; 
+	top: 66px; 
+	/*border-style: solid; 
+	border-color: red;*/
+}
+#torta img{
+	width: 100%;
+  	height: auto;
+}
+#Decoracion{
+	position: absolute; 
+	width: 320px;
+	height: 350px;
+	right: 30px; 
+	top: 107px; 
+	/*border-style: solid; 
+	border-color: black;*/
+}
+#Decoracion img{
+	width: 100%;
+  	height: 60px;
+}
+#Masa{
+	position: absolute; 
+	width: 750px;
+	height: 350px;
+	left: 87px; 
+	top: 64px; 
+	/*border-style: solid; 
+	border-color: blue;*/
+}
+#Masa img{
+	width: 40%;
+  	height: auto;
+}
+#Crema{
+	position: absolute; 
+	width: 300px;
+	height: 300px;
+	left: 88px; 
+	top: 66px; 
+	/*border-style: solid; 
+	border-color: green;*/
+}
+#Crema img{
+	width: 100%;
+  	height: auto;
+}
+#Frases{
+	position: absolute; 
+	width: 300px;
+	height: 300px;
+	left: 152px; 
+	top: 142px; 
+	/*border-style: solid; 
+	border-color: yellow;*/
+}
+#Frases img{
+	width: 50%;
+  	height: auto;
+}
