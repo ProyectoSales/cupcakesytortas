@@ -80,10 +80,11 @@ session_start();
 	 <div class="form-group">
 	<label>Contraseña:</label>
 	<input type="password" name="clave" class="form-control">
-	  <span class="Error"></span>
+	  <span class="Error"></span>   
 	</div>
 	<div class="form-group col-md-6">
 	<center><button class="btn-ingresar" type="submit" name="ingresar"><img src="img/botonCupcake.png" width="40" height="40"/>Iniciar</button></center>
+    <a href="registro.php" class="btn btn-danger">Registro</a>
 	</div>
 </form>
 
@@ -117,7 +118,7 @@ if (isset($_POST['ingresar'])) {
 		}
 	}else{
 		echo '<script>alert("Usuario o Contraseña Incorrectos");</script>';
-		echo '<script> window.location="login.php"</script>';
+		echo '<script> window.location="login.php"</script>';   
 	}
 }
 ?>
