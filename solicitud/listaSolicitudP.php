@@ -33,6 +33,7 @@
         rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Pacifico&amp;subset=cyrillic,latin-ext,vietnamese" rel="stylesheet">
     <!-- //Web-Fonts -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
 
 </head>
 
@@ -123,11 +124,13 @@ $solDao = new solicitudDao();
 $insuDao = new insumoDao(); 
 ?>  
 <div style="padding-top: 10px;" class="container">
-      <table class="table table-bordered">
+   <table id="datatable" class="table table-danger">    
         <thead>
+        <tr>
             <th>Id Solicitud</th>
             <th>Nombres</th>
             <th>Descripción</th>
+            </tr>
            </thead>
         <tbody>
             <?php
@@ -153,9 +156,16 @@ $insuDao = new insumoDao();
     
     <script src="../js/bootstrap.js"></script>
     <!-- Necessary-JavaScript-File-For-Bootstrap -->
-
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
     <!-- //Js files -->
 
 </body>
-
+<script>$(document).ready( function () {
+        $('#datatable').DataTable({
+    language: {
+        search: "Buscar:",  
+    }
+});
+    });
+    </script>
 </html>

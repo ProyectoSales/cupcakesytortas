@@ -33,6 +33,7 @@
         rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Pacifico&amp;subset=cyrillic,latin-ext,vietnamese" rel="stylesheet">
     <!-- //Web-Fonts -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
 
 </head>
 
@@ -125,14 +126,16 @@
 </div>
 <div class="col-md-12"style="display:flex;">
 <div class="col-md-6" style="margin:auto;">
-<table class="table table-bordered">
+<table id="datatable" class="table table-danger">
         <thead>
+        <tr>
             <th>ID</th>
             <th>Usuario</th>
             <th>Apellidos</th>
             <th>Fecha Entrega</th>
             <th>Estado</th>
             <th>Opciones</th>
+            </tr>
         </thead>
         <tbody>
         <?php
@@ -160,9 +163,16 @@
     
     <script src="..js/bootstrap.js"></script>
     <!-- Necessary-JavaScript-File-For-Bootstrap -->
-
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
     <!-- //Js files -->
 
 </body>
-
+<script>$(document).ready( function () {
+        $('#datatable').DataTable({
+    language: {
+        search: "Buscar:",  
+    }
+});
+    });
+    </script>
 </html>

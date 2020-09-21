@@ -4,12 +4,13 @@ class usuarioDao{
 		$cnn=Conexion::getConexion();
 		$mensaje="";
 		try {
-		  $query=$cnn->prepare("INSERT INTO usuarios VALUES (?,?,?,?,?)");
+		  $query=$cnn->prepare("INSERT INTO usuarios VALUES (?,?,?,?,?,?)");
 			$query->bindParam(1, $usuarioDto->getIdUsuario());
 			$query->bindParam(2, $usuarioDto->getNombreUsuario());
 			$query->bindParam(3, $usuarioDto->getApellidoUsuario());
 			$query->bindParam(4, $usuarioDto->getIdRol());
 			$query->bindParam(5, $usuarioDto->getClave());
+			$query->bindParam(6, $usuarioDto->getCorreo());
 			
 			$query->execute();
 			$mensaje="Registro Exitoso";

@@ -6,6 +6,7 @@ class usuarioDto{
   private $apellidoUsuario="";
   private $idRol=0;
   private $clave="";
+  private $correo="";
 
   function getIdUsuario(){
   	return $this->idUsuario;
@@ -25,7 +26,9 @@ class usuarioDto{
   function getClave(){
   	return $this->clave;
   }
-
+  function getCorreo(){
+    return $this->correo;
+  }
   function setIdUsuario($idUsuario){
       $this->idUsuario=$idUsuario;
   }
@@ -44,6 +47,10 @@ class usuarioDto{
 
   function setClave($clave){
   	$this->clave=$clave;
+  }
+
+  function setCorreo($correo){
+    $this->correo=$correo;
   }
 }
 

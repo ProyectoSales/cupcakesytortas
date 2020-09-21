@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="../css/style.css" type="text/css" media="all" />
     <!-- Style-CSS -->
     <link rel="stylesheet" href="../css/fontawesome-all.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
    
 
 </head>
@@ -103,14 +104,17 @@ require '../conexion/Conexion.php';
     <div class="col-md-12" >
         <center><h2 style="color: #f59ea8; padding: 10px;">Lista Insumos</h2></center>
     </div>
-    <table class="table table-striped table-bordered">
+    <table id="datatable" class="table table-danger">
     <thead>
+    <tr>
         <th>Id Insumo</th>
         <th>Nombre Insumo</th>
         <th>Stock</th>
         <th>Acciones</th>
+    </tr>
     </thead>
     <tbody>
+    
         <?php
          $insumo=$insuDao->listarInsumo();
          foreach ($insumo as $insuDao) {?>
@@ -138,9 +142,18 @@ require '../conexion/Conexion.php';
     
     <script src="../js/bootstrap.js"></script>
     <!-- Necessary-JavaScript-File-For-Bootstrap -->
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
 
     <!-- //Js files -->
 
 </body>
+    <script>$(document).ready( function () {
+        $('#datatable').DataTable({
+    language: {
+        search: "Buscar:",  
+    }
+});
+    });
+    </script>
 
 </html>
