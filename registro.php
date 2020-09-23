@@ -36,7 +36,11 @@
     <link href="//fonts.googleapis.com/css?family=Pacifico&amp;subset=cyrillic,latin-ext,vietnamese" rel="stylesheet">
     <!-- //Web-Fonts -->
 
+    <!-- //Sweet Alert -->
+    <link rel="stylesheet" href="./sweetalert/dist/sweetalert2.min">
+
 </head>
+
 
 <body>
  <div class="mian-content">
@@ -87,6 +91,10 @@ $rolDao = new rolDao();
     <input type="text" name="apellidos" class="form-control" minlength="3" required>   
     </div>
     <div class="form-group col-md-12">
+    <label for="exampleInputEmail1">Correo:</label>
+    <input type="email" name="correo" class="form-control" minlength="3" required>   
+    </div>
+    <div class="form-group col-md-12">
     <label>Contraseña</label>
     <input type="password" name="clave" class="form-control" minlength="8" required>   
     </div>
@@ -97,11 +105,24 @@ $rolDao = new rolDao();
     </div>
     
     
-     <center><button class="btn-ingresar" type="submit" name="registro1" id="registro1"><img src="./img/botonTorta.png" width="40" height="40"/>Registrar</button></center>
+     <center><button class="btn-ingresar" type="submit" name="registro1" id="registro1"  ><img src="./img/botonTorta.png" width="40" height="40"/>Registrar</button></center>
  
-</form> 
-</div>
+</form>
 
+<!--<script> 
+    function ConfirmInsert()
+    { 
+     var respuesta = confirm("estas seguro");
+        if( respuesta == true)
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+</script>-->
     <script src="./js/jquery-2.2.3.min.js"></script>
     <!-- Default-JavaScript-File -->
 
@@ -112,8 +133,12 @@ $rolDao = new rolDao();
     <script src="./js/bootstrap.js"></script>
     <!-- Necessary-JavaScript-File-For-Bootstrap -->
 
-    <!-- //Js files -->
 
+    <!-- //Js files -->
+    <!-- //Js sweetalert -->
+
+    <script src="./sweetalert/dist/sweetalert2.all.min.js"></script>
+    <script src="./controllerjs/registro.js"></script>
 </body>
 
 </html>

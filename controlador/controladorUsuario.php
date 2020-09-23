@@ -31,8 +31,25 @@ if (isset($_POST['registro']) or isset($_POST['registro1'] )) {
 			//echo 'window.location.href = "./../login.php";';
 			//echo '</script>';
 			//echo "registro ok1";
-			echo "<script>alert('Registro exitoso');location.href='./../login.php'</script>";
+			//echo "<script>alert('Registro exitoso');location.href='./../login.php'</script>";
 			
+			echo '<script>';
+			echo 'setTimeout(function () { 
+				swal({
+				  title: "Registro exitoso!",
+				  
+				  type: "success",
+				  confirmButtonText: "OK"
+				},
+				function(isConfirm){
+				  if (isConfirm) {
+					window.location.href = "./../login.php";
+				  }
+				}); }, 100);';
+			echo '</script>';
+		
+			
+					
 			//return header("Location: ./../login.php?mensaje=".$mensaje);
 			
 			
@@ -44,7 +61,7 @@ if (isset($_POST['registro']) or isset($_POST['registro1'] )) {
 			echo '<script type="text/javascript">';
 			echo 'alert("Usuario ya existe");';
 			echo 'window.location.href = "./../login.php";';
-			
+	
 			echo '</script>';
 
 		//header("Location: ./../login.php?mensaje=".$mensaje);
@@ -85,4 +102,9 @@ elseif (isset($_POST['editar'])) {
 
     header("Location: ../usuario/listaUsuario.php?mensaje=".$mensaje);
 }
+
+echo '<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>';
+echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>';
+echo '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">';
+
 ?>
