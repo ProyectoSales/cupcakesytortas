@@ -162,6 +162,23 @@ class productoDao{
 		return $mensaje;
 	}
 
+	public function validarProducto(productoDto $productoDto){
+		$cnn=Conexion::getConexion();
+		$mensaje="";
+		try {
+
+			$query=$cnn->prepare("SELECT nombreProducto FROM cupcakes.productos where nombreProducto = ?");
+			$query->bindParam(1,$productoDto->getNombreProducto());
+			
+			$query->execute();
+			
+			return $query->fetchAll();
+		} catch (Exception $e) {
+			$mensaje=$e->getMessage();
+		}
+		return $mensaje;
+	}
+
 	
 }
 

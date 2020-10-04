@@ -114,13 +114,30 @@ if (isset($_POST['ingresar'])) {
 				header("Location: proveedor.php");
 			}
 		}else{
-			echo '<script>alert("Usuario o Contraseña Incorrectos")</script>';
+			
 		}
 	}else{
-		echo '<script>alert("Usuario o Contraseña Incorrectos");</script>';
-		echo '<script> window.location="login.php"</script>';   
+		echo '<script>';
+			echo 'setTimeout(function () { 
+				swal({
+				  title: "Debe registrarse para acceder a nuestros servicios",
+				  
+				  type: "warning",
+				  confirmButtonText: "Registrarme"
+				},
+				function(isConfirm){
+				  if (isConfirm) {
+					window.location.href = "registro.php";
+				  }
+				}); }, 100);';
+			echo '</script>';   
 	}
 }
+
+echo '<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>';
+echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>';
+echo '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">';
+
 ?>
 </body>
 </html>

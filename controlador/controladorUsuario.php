@@ -17,7 +17,8 @@ if (isset($_POST['registro']) or isset($_POST['registro1'] )) {
 	
 	$valideUser = $usuDao->obtenerUsuario($_POST['idUsuario']);
 	
-	//$arrayUser = json_encode($valideUser);
+	
+	
 	
 	echo $valideUser[0];
 	if (empty($valideUser[0])) {
@@ -26,12 +27,7 @@ if (isset($_POST['registro']) or isset($_POST['registro1'] )) {
 			header("Location: ../usuario/listaUsuario.php?mensaje=".$mensaje);
 		}
 		else {
-			//echo '<script type="text/javascript">';
-			//echo 'alert("Creado ok");';
-			//echo 'window.location.href = "./../login.php";';
-			//echo '</script>';
-			//echo "registro ok1";
-			//echo "<script>alert('Registro exitoso');location.href='./../login.php'</script>";
+			
 			
 			echo '<script>';
 			echo 'setTimeout(function () { 
@@ -47,24 +43,25 @@ if (isset($_POST['registro']) or isset($_POST['registro1'] )) {
 				  }
 				}); }, 100);';
 			echo '</script>';
-		
-			
-					
-			//return header("Location: ./../login.php?mensaje=".$mensaje);
-			
-			
-			//header("Location: ./../login.php?mensaje=".$mensaje);
 		}
 	} else  {
-			//echo "registro ok2";
-			//return "registro insertado2";
-			echo '<script type="text/javascript">';
-			echo 'alert("Usuario ya existe");';
-			echo 'window.location.href = "./../login.php";';
-	
-			echo '</script>';
+			
+		echo '<script>';
+		echo 'setTimeout(function () { 
+			swal({
+			  title: "Usuario ya existe",
+			  
+			  type: "success",
+			  confirmButtonText: "OK"
+			},
+			function(isConfirm){
+			  if (isConfirm) {
+				window.location.href = "./../login.php";
+			  }
+			}); }, 100);';
+		echo '</script>';
 
-		//header("Location: ./../login.php?mensaje=".$mensaje);
+		
 	  
 	}
 
