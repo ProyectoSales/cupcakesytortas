@@ -120,14 +120,14 @@ if (isset($_POST['ingresar'])) {
 		echo '<script>';
 			echo 'setTimeout(function () { 
 				swal({
-				  title: "Debe registrarse para acceder a nuestros servicios",
+				  title: "Usuario o contraseña incorrectos",
 				  
 				  type: "warning",
-				  confirmButtonText: "Registrarme"
+				  confirmButtonText: "OK"
 				},
 				function(isConfirm){
 				  if (isConfirm) {
-					window.location.href = "registro.php";
+					window.location.href = "login.php";
 				  }
 				}); }, 100);';
 			echo '</script>';   

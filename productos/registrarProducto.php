@@ -127,13 +127,13 @@
     <form action="../controlador/controladorProducto.php" enctype="multipart/form-data" method="POST">
         <div class="form-group">
         <label>Nombre Producto:</label>
-        <input  type="text" name="nombreProducto" class="form-control">
+        <input  type="text" name="nombreProducto" class="form-control" required>
         </div>
         <div class="form-group ">
         <label>Cantidad</label>
-        <input type="text" name="cantidad" class="form-control">
+        <input type="number" name="cantidad" class="form-control" required>
         </div>
-        <div class="form-group ">
+        <div class="form-group" required>
         <label>Categoria</label>
         <select name="idCategoria">
             <option value="0">Seleccionar:</option>
@@ -146,15 +146,15 @@
         </div>
         <div class="form-group">
         <label>Precio:</label>
-        <input style="text-align: right;" type="number" name="precio" class="form-control">
+        <input style="text-align: right;" type="number" name="precio" class="form-control" required>
         </div>
         <div class="form-group ">
         <label>Estado:</label>
-        <input type="text" name="estado" class="form-control">
+        <input type="text" name="estado" class="form-control"required>
         </div>
         <div class="form-group ">
         <label>Imagen:</label>
-        <input type="file" class="form-control" id="file_url" name="file_url">
+        <input type="file" class="form-control" id="file_url" name="file_url"required>
         </div>
          <center><button class="btn-ingresar" type="submit" name="registrar" id="registrar"><img src="../img/botonCupcake.png" width="40" height="40"/>Registrar</button></center>
     </form>
