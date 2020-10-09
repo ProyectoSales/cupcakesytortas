@@ -5,9 +5,12 @@ class insumoDao{
 		$cnn=Conexion::getConexion();
 		$mensaje="";
 		try {
-			$query=$cnn->prepare("INSERT INTO insumos (nombreInsumo, stock) VALUES(?,?)");
+			$query=$cnn->prepare("INSERT INTO insumos (nombreInsumo, precio, descripcion) VALUES(?,?,?)");
 			$query->bindParam(1,$insumoDto->getNombreInsumo());
-			$query->bindParam(2,$insumoDto->getStock());
+			$query->bindParam(2,$insumoDto->getPrecio());
+			$query->bindParam(3,$insumoDto->getDescripcion());
+			//$query->bindParam(4,$insumoDto->getImagen());
+
 
 			$query->execute();
 			$mensaje="Registro Exitoso";
@@ -74,6 +77,21 @@ class insumoDao{
 		} catch (Exception $e) {
 			$mensaje=$e->getMessage();
 		}
+	}
+
+	public function validarInsumo(insumoDto $insumoDto){
+		$cnn=Conexion::getConexion();
+		$mensaje="";
+		try {
+			$query=$cnn->prepare( "SELECT nombreInsumo FROM insumos where nombreInsumo = ?");
+			$query->bindParam(1,$insumoDto->getNombreInsumo());
+			//$query=$cnn->prepare($validarInsumo);
+			$query->execute();
+			return $query->fetchAll();
+		} catch (Exception $e) {
+			$mensaje=$e->getMessage();
+		}
+		return $mensaje;
 	}
 
 }

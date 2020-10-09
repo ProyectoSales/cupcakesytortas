@@ -94,7 +94,7 @@
     </div>
 
         <div  class="container">
-        <form action="../controlador/controladorInsumo.php" method="POST">
+        <form action="../controlador/controladorInsumo.php" enctype="multipart/form-data" method="POST">
         <div class="col-md-12" >
         <center><h2 style="color: #f59ea8; padding: 10px;">Registrar Insumo</h2></center>
     	</div>
@@ -103,8 +103,16 @@
         <input type="text" name="nombreInsumo" class="form-control">
         </div>
         <div class="form-group ">
-        <label>Cantidad</label>
-        <input type="text" name="stock" class="form-control">
+        <label>Precio:</label>
+        <input type="text" name="precio" class="form-control">
+        </div>
+        <div class="form-group ">
+        <label>Descripción:</label>
+        <input type="text" name="descripcion" class="form-control">
+        </div>
+        <div class="form-group">
+        <label>Imagen:</label>
+        <input type="file" class="form-control" id="file_url" name="file_url">
         </div>
         <center><button class="btn-ingresar" type="submit" name="registrar" id="registrar"><img src="../img/botonTorta.png" width="40" height="40"/>Registrar</button></center>
         </form>
